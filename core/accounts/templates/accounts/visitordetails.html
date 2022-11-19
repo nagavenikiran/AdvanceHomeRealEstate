@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visitor Details</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		.form-center {
+        display:flex;
+        justify-content: center;
+        }
+		</style>
+</head>
+
+<body style="background-color:powderblue;">
+    <div style="background-color:#33475b" align="center">
+
+            <span ><a  class="hello-msg" href="{% url 'Home' %}" style="font-size:150%;">Home  &nbsp;&nbsp;&nbsp;   </a></span>
+            <span ><a  class="hello-msg" href="{% url 'About Us' %}" style="font-size:150%;">About Us &nbsp;&nbsp;&nbsp;     </a></span>
+            <span ><a  class="hello-msg" href="{% url 'Listings' %}" style="font-size:150%;">Listings &nbsp;&nbsp;&nbsp;    </a></span>
+            <span ><a  class="hello-msg" href="{% url 'Search Listings' %}" style="font-size:150%;">Search Listings &nbsp;&nbsp;&nbsp;     </a></span>
+            <span ><a  class="hello-msg" href="{% url 'Omaha Events' %}" style="font-size:150%;">Omaha Events &nbsp;&nbsp;&nbsp;      </a></span>
+      </div>
+
+        <h2 align="center"> Ask Madison a Question</h2>
+    <div class="form-center">
+        <form>
+            <table>
+                <tr>
+                    <th>
+                        <br> <label for="fname" style="background-color:#33475b; color:white"> &nbsp;&nbsp;&nbsp;First name &nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" id="fname" name="fname"><br><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                         <label for="lname" style="background-color:#33475b; color:white">&nbsp;&nbsp;&nbsp;Last name &nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" id="lname" name="lname"><br><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                         <label for="phone" style="background-color:#33475b; color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="phone" name="phone"><br><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="email" style="background-color:#33475b; color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="email" name="email"><br><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                         <label for="propinterested" style="background-color:#33475b; color:white">&nbsp;&nbsp;&nbsp;Property Interested &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="propinterested" name="propinterested" placeholder="8110 S 177th Street, Omaha, NE 68136." style="width:80%"> <br><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                         <label for="question" style="background-color:#33475b; color:white"> &nbsp;&nbsp;&nbsp;What would you like to know? &nbsp;&nbsp;&nbsp; </label><br>
+                        <input type="text" id="question" name="question"> <br><br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <br><input type="button" value="Save" style="background-color:#33475b; color:white">
+                            <input type="button" value="Submit" style="background-color:#33475b; color:white">
+                    </th>
+                </tr>
+
+            </table>
+        </form>
+
+
+    </div>
+
+</body>
+</html>
