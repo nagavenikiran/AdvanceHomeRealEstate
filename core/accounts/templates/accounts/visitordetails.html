@@ -20,17 +20,31 @@
         justify-content: center;
         }
 		</style>
+        <style>
+		.button {
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+        }
+	</style>
 </head>
 
 <body style="background-color:powderblue;">
     <div style="background-color:#33475b" align="center">
 
-            <span ><a  class="hello-msg" href="{% url 'Home' %}" style="font-size:150%;">Home  &nbsp;&nbsp;&nbsp;   </a></span>
-            <span ><a  class="hello-msg" href="{% url 'About Us' %}" style="font-size:150%;">About Us &nbsp;&nbsp;&nbsp;     </a></span>
-            <span ><a  class="hello-msg" href="{% url 'Listings' %}" style="font-size:150%;">Listings &nbsp;&nbsp;&nbsp;    </a></span>
-            <span ><a  class="hello-msg" href="{% url 'Search Listings' %}" style="font-size:150%;">Search Listings &nbsp;&nbsp;&nbsp;     </a></span>
-            <span ><a  class="hello-msg" href="{% url 'Omaha Events' %}" style="font-size:150%;">Omaha Events &nbsp;&nbsp;&nbsp;      </a></span>
-      </div>
+            <span ><a  class="hello-msg" href="homepage.html" style="font-size:150%;">Home  &nbsp;&nbsp;&nbsp;   </a></span>
+            <span ><a  class="hello-msg" href="AboutUs.html" style="font-size:150%;">About Us &nbsp;&nbsp;&nbsp;     </a></span>
+            <span ><a  class="hello-msg" href="listings.html" style="font-size:150%;">Listings &nbsp;&nbsp;&nbsp;    </a></span>
+            <span ><a  class="hello-msg" href="searchlistings.html" style="font-size:150%;">Search Listings &nbsp;&nbsp;&nbsp;     </a></span>
+            <span ><a  class="hello-msg" href="omahaevents.html" style="font-size:150%;">Omaha Events &nbsp;&nbsp;&nbsp;      </a></span>
+ </div>
 
         <h2 align="center"> Ask Madison a Question</h2>
     <div class="form-center">
@@ -75,11 +89,15 @@
 
 
                 <tr>
-                    <th>
-                        <br><input type="button" value="Save" style="background-color:#33475b; color:white">
-                            <input type="button" value="Submit" style="background-color:#33475b; color:white">
+                    <th style="color:white; width:100%; border:">
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="button" type="button" style="background-color:#33475b" onclick="window.location='filteredlistings.html';">Save</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="button" type="button" style="background-color:#33475b" onclick="window.location='confirmationmessage.html';">Submit</button>
+
                     </th>
                 </tr>
+
+
 
             </table>
         </form>
