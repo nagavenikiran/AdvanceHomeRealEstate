@@ -18,7 +18,7 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background-image: url('{% static '/images/House3.jpg' %}');
+			background-image: url('{% static ' /images/House3.jpg' %}');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: 100% 100%;
@@ -48,13 +48,11 @@
 			color: #f1f1f1;
 		}
 
-		.main {
+		 .main {
 			margin-left: 200px;
-			/* Same as the width of the sidenav */
 			font-size: 28px;
-			/* Increased text to enable scrolling */
 			padding: 0px 10px;
-		}
+		} 
 
 		@media screen and (max-height: 450px) {
 			.sidenav {
@@ -65,8 +63,6 @@
 				font-size: 18px;
 			}
 		}
-
-
 	</style>
 
 </head>
@@ -86,8 +82,22 @@
 		<a href="{% url 'logout' %}">Logout</a>
 	</div>
 
+	<div class="main">
+		<h2>About me</h2>
+		<style>
+		h2 {  
+			text-decoration: underline overline dotted purple;  
+		  }
+		</style>
+		<p>I provide real estates such as home, apartment,</p>
+		housing to rent and buy. After obtaining my
+		undergraduate degree in Business Administration,
+	    got my Real Estate License and became a real estate
+		agent with a well-respected Omaha are brokerage.
+		Soon, I decided to strike out on my own and obtained my 
+		Broker's License as well. Currently, I am the owner and 
+		operator of Advance Home Real Estate.
+	</div>
+
 
 </body>
-
-
-

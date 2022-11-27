@@ -57,6 +57,6 @@ def home(request):
     return render(request, 'accounts/dashboard.html', context)
 
 @login_required(login_url='login')
-def productpage(request):
+def myprofile(request):
     context = {}
-    return render(request, 'accounts/productpage.html', context)
+    return render(request, 'accounts/myprofile.html', context)
