@@ -55,3 +55,8 @@ def logoutUser(request):
 def home(request):
     context = {}
     return render(request, 'accounts/dashboard.html', context)
+
+@login_required(login_url='login')
+def productpage(request):
+    context = {}
+    return render(request, 'accounts/productpage.html', context)
