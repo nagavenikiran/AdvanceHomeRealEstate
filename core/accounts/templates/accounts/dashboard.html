@@ -1,39 +1,26 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Login</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-
+	<title>Advance RealEstate</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<style>
-		body,
-		html {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			background-image: url('{% static '/images/House3.jpg' %}');
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: 100% 100%;
+		/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+		.row.content {
+			height: 750px
 		}
 
+		/* Set gray background color and 100% height */
 		.sidenav {
+			background-color: darkgray;
 			height: 100%;
-			width: 210px;
-			position: fixed;
-			z-index: 1;
-			top: 0;
-			left: 0;
-			background-color: #808080;
-			overflow-x: hidden;
-			padding-top: 20px;
+			width: 20%;
+
 		}
 
 		.sidenav a {
@@ -44,50 +31,56 @@
 			display: block;
 		}
 
-		.sidenav a:hover {
-			color: #f1f1f1;
-		}
-
-		.main {
-			margin-left: 200px;
-			/* Same as the width of the sidenav */
-			font-size: 28px;
-			/* Increased text to enable scrolling */
-			padding: 0px 10px;
-		}
-
-		@media screen and (max-height: 450px) {
-			.sidenav {
-				padding-top: 15px;
-			}
-
-			.sidenav a {
-				font-size: 18px;
+		/* On small screens, set height to 'auto' for the grid */
+		@media screen and (max-width: 767px) {
+			.row.content {
+				height: auto;
 			}
 		}
-
-
 	</style>
-
 </head>
 
-<body>
+<body bgcolor="#696969">
 
-	<span class="hello-msg">{{request.user}}</span>
-	<span><a class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+	<nav class="navbar navbar-inverse visible-xs">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+		</div>
+	</nav>
 
-	<div class="sidenav">
-		<a href="#about">Home</a>
-		<a href="{% url 'myprofile' %}">My Profile</a>
-		<a href="#clients">Listings</a>
-		<a href="#contact">Visitor Requests</a>
-		<a href="#contact">Pull Visitor Logs</a>
-		<a href="#contact">Omaha Events</a>
-		<a href="{% url 'logout' %}">Logout</a>
-	</div>
+	<div class="container-fluid">
+		<div class="row content">
+			<div class="col-sm-3 sidenav hidden-xs">
+				<h2>aV</h2>
+				<ul class="nav nav-pills nav-stacked">
 
+					<li><a href="#about">Home</a></li>
+					<li><a href="{% url 'myprofile' %}">My Profile</a></li>
+					<li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
+					<li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
+					<li><a href="#contact">Pull Visitor Logs</a></li>
+					<li><a href="#contact">Omaha Events</a></li>
+					<li><a href="{% url 'logout' %}">Logout</a></li>
+				</ul><br>
+			</div>
+			<br>
+			<h1 align="right">{{request.user}}</h1>
+			<h1>
+				<center>This Week's FEATURED PROPERTY </center>
+			</h1>
+			<img src="{% static '/images/House3.jpg' %}" hspace="150" vspace="20" height="300" width="300"
+				style="float: left; margin-right: 15px;">
+			<h3>Classic Home<br>$6728<br>12314 W Maple Rd, Omaha, NE<br>4722 sq.ft<br><br><br><br><br><br><br><br><u>Set
+					new
+					featured Property</u></h3>
 
 </body>
 
-
-
+</html>
