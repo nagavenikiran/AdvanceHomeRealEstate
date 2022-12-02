@@ -23,8 +23,20 @@
 
         }
 	</style>
+    <style>
+        #block1
+    	{
+
+      		padding: 20px;
+      		width: 500px;
+      		margin-left: auto;
+            margin-right: auto;
+
+    	}
+    </style>
 </head>
-<body style="background-color:powderblue;">
+
+<body style="background-color:#c5d4e8;">
     <div style="background-color:#33475b" align="center">
 
             <span ><a  class="hello-msg" href="homepage.html" style="font-size:150%;">Home  &nbsp;&nbsp;&nbsp;   </a></span>
@@ -34,38 +46,67 @@
             <span ><a  class="hello-msg" href="omahaevents.html" style="font-size:150%;">Omaha Events &nbsp;&nbsp;&nbsp;      </a></span>
     </div>
     <br><br><br>
-    <div align="center">
-        <label for="search" style="font-size:200%"> <b>Search Property by:</b></label>
+    <div style="background-color:#ffffff80" id="block1">
+     <h4 align="center" style="font-size:200%"> <b> Search Properties by </b></h4> <br>
+        <div align="center">
+        <label for="search" style="font-size:200%"> </b></label>
         <select name="search" id="search">
         <optgroup label="Home Type">
-            <option value="" disabled selected hidden>Select category to search</option>
+            <option value="" disabled selected hidden>Choose Home Type </option>
             <option value="Tudor">Tudor</option>
             <option value="Ranch">Ranch</option>
             <option value="Townhome"> Townhome</option>
+            <option value="Classic"> Classic</option>
+            <option value="Condominium"> Condominium</option>
+            <option value="Split-Entry"> Split-Entry</option>
         </optgroup>
-        <optgroup label="Neighbourhood">
+            </select></div> <br>
+
+    <div align="center">
+        <label for="search" style="font-size:200%"> </label>
+        <select name="search" id="searchbyNeighborhood">
+             <optgroup label="Neighbourhood">
+                 <option value="" disabled selected hidden>Choose Neighbourhood </option>
             <option value="Downtown">Downtown</option>
             <option value="Benson">Benson</option>
             <option value="Happy Hollow">Happy Hollow</option>
             <option value="Rockbrook">Rockbrook</option>
         </optgroup>
-            <optgroup label="Zip Code">
+        </select>
+    </div> <br>
+
+    <div align="center">
+         <label for="search" style="font-size:200%"> </label>
+        <input type="text" id="searchbyZipcode" name="searchbyZipcode" placeholder= "Enter Zipcode"> <br><br>
+
+        <!-- <select name="search" id="searchbyZipcode1">
+             <optgroup label="Zip Code">
             <option value="zip2">68102</option>
                 <option value="zip2">68104</option>
                 <option value="zip3">68105</option>
                 <option value="zip4">68106</option>
         </optgroup>
-            <optgroup label="Price Range">
+        </select> -->
+    </div>
+
+       <div align="center">
+           <label for="search" style="font-size:200%"> </label>
+        <select name="search" id="searchbyPrice">
+             <optgroup label="Price Range">
+                 <option value="" disabled selected hidden> Price Range </option>
             <option value="range1">$0 - $300,000</option>
             <option value="range2">$300,001 - $500,000</option>
                 <option value="range3">$500,001 - $700,000</option>
                 <option value="range4">$700,001 - $1,000,000</option>
+                 <option value="range4">Above $1,000,000</option>
         </optgroup>
         </select>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       </div>
+    <br><br><br><br><br><br>
+
      <div style="color:white; width:100%; border:" align="center">
         <br> <button class="button" type="button" style="background-color:#33475b" onclick="window.location='filteredlistings.html';">Search</button>
+    </div>
     </div>
 
 </body>

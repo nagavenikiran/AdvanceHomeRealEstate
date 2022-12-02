@@ -32,11 +32,19 @@
             transition-duration: 0.4s;
             cursor: pointer;
 
+
         }
 	</style>
+    <style>
+        #textboxid
+        {
+             height:120px;
+               font-size:14pt;
+        }
+    </style>
 </head>
 
-<body style="background-color:powderblue;">
+<body style="background-color:#c5d4e8;">
     <div style="background-color:#33475b" align="center">
 
             <span ><a  class="hello-msg" href="homepage.html" style="font-size:150%;">Home  &nbsp;&nbsp;&nbsp;   </a></span>
@@ -82,8 +90,8 @@
                 </tr>
                 <tr>
                     <th>
-                         <label for="question" style="background-color:#33475b; color:white"> &nbsp;&nbsp;&nbsp;What would you like to know? &nbsp;&nbsp;&nbsp; </label><br>
-                        <input type="text" id="question" name="question"> <br><br>
+                         <label for="textboxid" style="background-color:#33475b; color:white"> &nbsp;&nbsp;&nbsp;What would you like to know? &nbsp;&nbsp;&nbsp; </label><br>
+                        <input type="text" id="textboxid" name="question" size="50"> <br><br>
                     </th>
                 </tr>
 
@@ -91,8 +99,8 @@
                 <tr>
                     <th style="color:white; width:100%; border:">
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="button" type="button" style="background-color:#33475b" onclick="window.location='filteredlistings.html';"><b> Save </b></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="button" type="button" style="background-color:#33475b" onclick="window.location='confirmationmessage.html';"> <b> Submit</b></button>
+                       <!-- <button class="button" type="button" style="background-color:#33475b" onclick="window.location='filteredlistings.html';"><b> Save </b></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                        &nbsp;&nbsp;&nbsp;&nbsp; <button class="button" type="button" style="background-color:#33475b" onclick="window.location='confirmationmessage.html';"> <b> Submit</b></button>
 
                     </th>
                 </tr>
