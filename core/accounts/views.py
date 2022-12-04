@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from .models import *
 from .forms import CreateUserForm
 
+
 def registerPage(request):
     if request.user.is_authenticated:
         return redirect('home')
@@ -56,7 +57,17 @@ def home(request):
     context = {}
     return render(request, 'accounts/dashboard.html', context)
 
+
+def home1(request):
+    context = {}
+    return render(request, 'accounts/dashboard.html', context)
 @login_required(login_url='login')
 def myprofile(request):
     context = {}
     return render(request, 'accounts/myprofile.html', context)
+
+
+@login_required(login_url='login')
+def updateprofile(request):
+    context = {}
+    return render(request, 'accounts/updateprofile.html', context)

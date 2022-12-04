@@ -13,13 +13,14 @@
 		/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 		.row.content {
 			height: 750px
+
 		}
 
 		/* Set gray background color and 100% height */
 		.sidenav {
-			background-color: darkgray;
+			background-color: #808d9e;
 			height: 100%;
-			width: 20%;
+			width: 18%;
 
 		}
 
@@ -31,16 +32,18 @@
 			display: block;
 		}
 
+
 		/* On small screens, set height to 'auto' for the grid */
 		@media screen and (max-width: 767px) {
 			.row.content {
 				height: auto;
 			}
 		}
+
 	</style>
 </head>
 
-<body bgcolor="#696969">
+<body style="background-color:#c5d4e8;">
 
 	<nav class="navbar navbar-inverse visible-xs">
 		<div class="container-fluid">
@@ -61,7 +64,8 @@
 				<h2>aV</h2>
 				<ul class="nav nav-pills nav-stacked">
 
-					<li><a href="#about">Home</a></li>
+
+					<li><a href="{% url 'home1' %}">Home</a></li>
 					<li><a href="{% url 'myprofile' %}">My Profile</a></li>
 					<li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
 					<li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
@@ -71,15 +75,14 @@
 				</ul><br>
 			</div>
 			<br>
-			<h1 align="right">{{request.user}}</h1>
+			<h1 align="right"><b>Madison Vance</b></h1>
 			<h1>
-				<center>This Week's FEATURED PROPERTY </center>
+				<left>This Week's FEATURED PROPERTY </left>
 			</h1>
-			<img src="{% static '/images/House3.jpg' %}" hspace="150" vspace="20" height="300" width="300"
-				style="float: left; margin-right: 15px;">
-			<h3>Classic Home<br>$6728<br>12314 W Maple Rd, Omaha, NE<br>4722 sq.ft<br><br><br><br><br><br><br><br><u>Set
-					new
-					featured Property</u></h3>
+			<img src="{% static '/images/img.png' %}" hspace="150" vspace="30" height="300" width="500"
+				style="float: left; margin-right: 15px;"><br><br>
+			<h3>Classic Home<br><br>$6728<br><br>12314 W Maple Rd, Omaha, NE<br><br>4722 sq.ft<br><br><br><br><br><br>
+				<u><left>Set new featured Property</left></u></h3>
 
 </body>
 
