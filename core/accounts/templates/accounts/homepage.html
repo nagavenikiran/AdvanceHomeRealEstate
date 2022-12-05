@@ -48,17 +48,34 @@
             float: left;
 
     	}
+         #block2
+    	{
+      		padding: 10px;
+      		width: 100px;
+      		margin: 60px 20px;
+            float: left;
+            position: fixed;
+             bottom: 0;
+    	}
+         #block3
+    	{
+      		padding: 0px;
+      		width: 150px;
+      		margin: 3px 10px;
+            float: right;
+
+    	}
     </style>
 </head>
 
 <body style="background-color:#c5d4e8;">
-    <div style="background-color:#33475b" align="center" >
+    <div style="background-color:#33475b; color: white" align="center" >
 
-            <span ><a  class="hello-msg" href="landing" style="font-size:150%;">Home  &nbsp;&nbsp;&nbsp;   </a></span>
-            <span ><a  class="hello-msg" href="AboutUs" style="font-size:150%;">About Us &nbsp;&nbsp;&nbsp;     </a></span>
-            <span ><a  class="hello-msg" href="listings" style="font-size:150%;">Listings &nbsp;&nbsp;&nbsp;    </a></span>
-            <span ><a  class="hello-msg" href="searchlistings" style="font-size:150%;">Search Listings &nbsp;&nbsp;&nbsp;     </a></span>
-            <span ><a  class="hello-msg" href="omahaevents" style="font-size:150%;">Omaha Events &nbsp;&nbsp;&nbsp;      </a></span>
+            <span ><a  class="hello-msg" href="landing" style="font-size:150%; color: white ">Home  &nbsp;&nbsp;&nbsp;   </a></span>
+            <span ><a  class="hello-msg" href="AboutUs" style="font-size:150%; color: white">About Us &nbsp;&nbsp;&nbsp;     </a></span>
+            <span ><a  class="hello-msg" href="listings" style="font-size:150%; color: white">Listings &nbsp;&nbsp;&nbsp;    </a></span>
+            <span ><a  class="hello-msg" href="searchlistings" style="font-size:150%; color: white">Search Listings &nbsp;&nbsp;&nbsp;     </a></span>
+            <span ><a  class="hello-msg" href="omahaevents" style="font-size:150%; color: white">Omaha Events &nbsp;&nbsp;&nbsp;      </a></span>
     </div><br>
 
     <div id="block1" style="background-color:#33475b;font-size:50%">
@@ -70,15 +87,16 @@
         <br> <button class="button" type="button" style="background-color:#33475b" onclick="window.location={% url 'login' %};"> <b> Agent Login</b></button>
     </div>
 
-    <div>
+    <div id="block3" style="color:white; width:45%;">
             <h3 align="center"><b> Welcome to AdVance Home Real Estate..! </b></h3>
-            <h3 align="right">Find you home with us...!</h3>
+            <h3 align="right"><b>Find you home with us...!</b></h3>
+    </div>
 
-
-            <h1 align="left" style="color:Black;"> <br><br><br><br><br><br><br><br>Featured Property </h1>
-            <h2 style="color:Black;"> Classic Home </h2>
-            <h2 style="color:Black;"> 12314, W Maple RD</h2>
-            <h2 style="color:Black;"> $6728 </h2>
+    <div id="block2" style="color:white; width:33%; background-color:#33475b;">
+        <h2 align="left" style="font-size:200%"> This week's Featured Property </h2>
+            <h3 style="font-size:150%"> Classic Home </h3>
+            <h3 style="font-size:150%"> 12314, W Maple RD</h3>
+            <h3 style="font-size:150%"> $6728 </h3>
 
     </div>
 
