@@ -10,3 +10,4 @@ class UserProfile(models.Model):
     weburl = models.CharField(max_length=101)
     password = models.CharField(max_length=50, null=True)
     username = models.CharField(max_length=50, null=True)
+    mobile = models.CharField(max_length=50, null=True)

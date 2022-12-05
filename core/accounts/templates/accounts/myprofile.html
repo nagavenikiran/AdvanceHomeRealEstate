@@ -129,28 +129,29 @@
         <table>
             <tr>
             <th style="color:white; font-size:120%">Name: </th>
-            <th style="color:white; font-size:120%">Madison Vance</th>
+	    <th style="color:white; font-size:120%">{{dataset.0.firstname}} {{dataset.0.lastname}}</th>
         </tr>
             <tr> <th> <br></th> </tr>
         <tr>
             <th style="color:white; font-size:120%">Cell Number: </th>
-            <th style="color:white; font-size:120%">402-XXX-XXX</th>
+            <th style="color:white; font-size:120%">{{dataset.0.mobile}}</th>
         </tr>
             <tr> <th> <br></th> </tr>
         <tr>
             <th style="color:white; font-size:120%">Email me: </th>
             <th style="color:white">
-                <span ><a  class="hello-msg" href="visitordetails.html" style="font-size:120%;">madison@gmail.com &nbsp;&nbsp;&nbsp;</a></span>
+                <span ><a  class="hello-msg" href="visitordetails.html" style="font-size:120%;">{{dataset.0.useremail}}&nbsp;&nbsp;&nbsp;</a></span>
             </th>
         </tr>
             <tr> <th> <br></th> </tr>
         <tr>
             <th style="color:white; font-size:120%"> Office Address: </th>
-            <th style="color:white; font-size:120%">3701 N 132st, Omaha, NE</th>
+            <th style="color:white; font-size:120%">{{dataset.0.address}}</th>
         </tr>
             <tr> <th> <br></th> </tr>
             <tr>
             <th style="color:white; font-size:120%">Visit my Website: </th>
+            <th style="color:white; font-size:120%">{{dataset.0.weburl}}</th>
             <th style="color:white">
 
             </th>
@@ -169,6 +170,19 @@
 
             <h1 align="right"><b>Madison Vance</b></h1>
              <p align="right"><button class="block"><a href="{% url 'updateprofile' %}">Update Profile</a></button></p>
+
+
+<div class="main">
+
+	{% for data in dataset %}.
+
+	{{ data.firstname }}<br/>
+	{{ data.lastname }}<br/>
+	<hr/>
+
+	{% endfor %}
+
+</div>
 
 
 </body>

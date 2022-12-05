@@ -61,6 +61,7 @@ def home1(request):
 @login_required(login_url='login')
 def myprofile(request):
     context = {}
+    context["dataset"] = UserProfile.objects.all()
     return render(request, 'accounts/myprofile.html', context)
 
 
@@ -68,3 +69,5 @@ def myprofile(request):
 def updateprofile(request):
     context = {}
     return render(request, 'accounts/updateprofile.html', context)
+
+
