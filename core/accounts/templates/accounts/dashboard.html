@@ -1,33 +1,105 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html>
-    
+<html lang="en">
+
 <head>
-	<title>Login</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-
+	<title>Advance RealEstate</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<style>
-		body,
-		html {
-			margin: 0;
-			padding: 0;
+
+	body,html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: url('{% static '/images/background.png' %}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    	}
+
+		/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+		.row.content {
+			height: 750px	
+
+		}
+
+		/* Set gray background color and 100% height */
+		.sidenav {
+			background-color: #808d9e;
 			height: 100%;
-			background-image: url('{% static '/images/House3.jpg' %}');
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: 100% 100%;
+			width: 18%;
+
+		}
+
+		.sidenav a {
+			padding: 6px 8px 6px 16px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #000000;
+			display: block;
+		}
+
+
+		/* On small screens, set height to 'auto' for the grid */
+		@media screen and (max-width: 767px) {
+			.row.content {
+				height: auto;
+			}
 		}
 
 	</style>
-
 </head>
-<body>
 
+<<<<<<< HEAD
+<body style="background-color:#c5d4e8;">
+=======
 <span class="hello-msg">{{request.user}}</span>
 <span ><a  class="hello-msg" href="{% url 'accounts:logout' %}">Logout</a></span>
+>>>>>>> main
+
+	<nav class="navbar navbar-inverse visible-xs">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row content">
+			<div class="col-sm-3 sidenav hidden-xs">
+				<h2>aV</h2>
+				<ul class="nav nav-pills nav-stacked">
+
+
+					<li><a href="{% url 'home1' %}">Home</a></li>
+					<li><a href="{% url 'myprofile' %}">My Profile</a></li>
+					<li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
+					<li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
+					<li><a href="#contact">Pull Visitor Logs</a></li>
+					<li><a href="#contact">Omaha Events</a></li>
+					<li><a href="{% url 'logout' %}">Logout</a></li>
+				</ul><br>
+			</div>
+			<br>
+			<h1 align="right"><b>Madison Vance</b></h1>
+			<h1>
+				<left>This Week's FEATURED PROPERTY </left>
+			</h1>
+			<img src="{% static '/images/img.png' %}" hspace="150" vspace="30" height="300" width="500"
+				style="float: left; margin-right: 15px;"><br><br>
+			<h3>Classic Home<br><br>$6728<br><br>12314 W Maple Rd, Omaha, NE<br><br>4722 sq.ft<br><br><br><br><br><br>
+				<u><left>Set new featured Property</left></u></h3>
 
 </body>
+
+</html>

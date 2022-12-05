@@ -6,7 +6,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 from .models import *
-from .forms import CreateUserForm
+from django.shortcuts import (get_object_or_404,
+                              render,
+                              HttpResponseRedirect)
+from .forms import UserModify
+
 
 def landingPage(request):
     #Update this with HTML page from Saikiran and Niha
@@ -77,6 +81,34 @@ def logoutUser(request):
 @login_required(login_url='accounts:login')
 def home(request):
     context = {}
+<<<<<<< HEAD
+    return render(request, 'accounts/dashboard.html', context)
+
+
+def home1(request):
+    context = {}
+    return render(request, 'accounts/dashboard.html', context)
+
+
+@login_required(login_url='login')
+def myprofile(request):
+    context = {}
+    context["dataset"] = UserProfile.objects.all()
+    return render(request, 'accounts/myprofile.html', context)
+
+
+@login_required(login_url='login')
+def updateprofile(request):
+    context = {}
+    id = 1
+    obj = get_object_or_404(UserProfile, id=id)
+    form = UserModify(request.POST or None, instance=obj)
+    if form.is_valid():
+        form.save()
+        return render(request, 'accounts/myprofile.html', context)
+    context["form"] = form
+    return render(request, 'accounts/updateprofile.html', context)
+=======
     # return render(request, 'accounts/dashboard.html', context)
     return HttpResponseRedirect(reverse('admin:index'))
 def listing_list(request):
@@ -91,3 +123,4 @@ def listing_detail(request, id):
     return render(request,
                   'accounts/listing/detail.html',
                   {'listing': listing})
+>>>>>>> main

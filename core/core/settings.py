@@ -129,3 +129,11 @@ LOGOUT_REDIRECT_URL = 'accounts:landing'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+<<<<<<< HEAD
+
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+X_FRAME_OPTIONS = 'ALLOWALL'
+
+XS_SHARING_ALLOWED_METHODS = ['POST','GET','OPTIONS', 'PUT', 'DELETE']
+=======
+>>>>>>> main
