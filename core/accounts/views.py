@@ -6,7 +6,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 from .models import *
-from .forms import CreateUserForm
+from django.shortcuts import (get_object_or_404,
+                              render,
+                              HttpResponseRedirect)
+from .forms import UserModify
 
 
 def registerPage(request):
@@ -25,6 +28,7 @@ def registerPage(request):
 
         context = {'form': form}
         return render(request, 'accounts/register.html', context)
+
 
 def loginPage(request):
     if request.user.is_authenticated:
@@ -45,18 +49,22 @@ def loginPage(request):
         context = {}
         return render(request, 'accounts/login.html', context)
 
+
 def logoutUser(request):
     logout(request)
     return redirect('login')
+
 
 @login_required(login_url='login')
 def home(request):
     context = {}
     return render(request, 'accounts/dashboard.html', context)
 
+
 def home1(request):
     context = {}
     return render(request, 'accounts/dashboard.html', context)
+
 
 @login_required(login_url='login')
 def myprofile(request):
@@ -68,6 +76,11 @@ def myprofile(request):
 @login_required(login_url='login')
 def updateprofile(request):
     context = {}
+    id = 1
+    obj = get_object_or_404(UserProfile, id=id)
+    form = UserModify(request.POST or None, instance=obj)
+    if form.is_valid():
+        form.save()
+        return render(request, 'accounts/myprofile.html', context)
+    context["form"] = form
     return render(request, 'accounts/updateprofile.html', context)
-
-

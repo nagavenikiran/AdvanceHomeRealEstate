@@ -11,7 +11,18 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<style>
 		/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-		.row.content {
+		
+    body,html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: url('{% static '/images/background.png' %}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    	}
+      
+    .row.content {
 			height: 750px
 
 		}
@@ -170,19 +181,6 @@
 
             <h1 align="right"><b>Madison Vance</b></h1>
              <p align="right"><button class="block"><a href="{% url 'updateprofile' %}">Update Profile</a></button></p>
-
-
-<div class="main">
-
-	{% for data in dataset %}.
-
-	{{ data.firstname }}<br/>
-	{{ data.lastname }}<br/>
-	<hr/>
-
-	{% endfor %}
-
-</div>
 
 
 </body>
