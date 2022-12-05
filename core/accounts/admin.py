@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import Listing, Property_Type, Prop_Status, Subdivision
+from .models import Listing, Property_Type, Prop_Status, Subdivision, UserProfile
 
+
+admin.site.register(UserProfile)
 
 # Register your models here.
 @admin.register(Listing)
@@ -20,3 +22,4 @@ class Prop_StatusAdmin(admin.ModelAdmin):
 @admin.register(Subdivision)
 class SubdivisionAdmin(admin.ModelAdmin):
     list_display = ('subdiv_name', 'subdiv_descr')
+

@@ -2,14 +2,18 @@ from django.urls import path
 from . import views
 from django.views.generic import RedirectView
 
-app_name = 'accounts'
-
 urlpatterns = [
-	path('register/', views.registerPage, name="register"),
+    path('myprofile/', views.myprofile, name="myprofile"),
+    path('updateprofile/', views.updateprofile, name="updateprofile"),
+    path('home1/', views.home1, name="home1"),
+    path('dashboard/', views.dashboard, name="dashboard"),
+
+	#path('register', views.registerPage, name="register"),
 	path('login/', views.loginPage, name="login"),
 	path('logout/', views.logoutUser, name="logout"),
-    path('home/', views.home, name="home"),
+    #path('home', views.home, name="home"),
 	path('', views.landingPage, name="landing"),
+
 	path('landing', views.landingPage, name="landing"),
 	path('AboutUs', views.aboutUs, name="AboutUs"),
 	path('searchlistings', views.searchListings, name="searchListings"),

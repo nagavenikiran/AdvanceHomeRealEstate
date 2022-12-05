@@ -1,12 +1,17 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 from .models import *
-from .forms import CreateUserForm
+from django.shortcuts import (get_object_or_404,
+                              render,
+                              HttpResponseRedirect)
+from .forms import UserModify
+
+
 
 def landingPage(request):
     #Update this with HTML page from Saikiran and Niha
@@ -31,27 +36,9 @@ def filteredlistings(request):
     return render(request, 'accounts/filteredlistings.html')
 
 
-def registerPage(request):
-    if request.user.is_authenticated:
-        return redirect('accounts:home')
-    else:
-        form = CreateUserForm()
-        if request.method == 'POST':
-            form = CreateUserForm(request.POST)
-            if form.is_valid():
-                form.save()
-                user = form.cleaned_data.get('username')
-                messages.success(request, 'Account was created for ' + user)
-
-                return redirect('accounts:login')
-
-        context = {'form': form}
-        return render(request, 'accounts/register.html', context)
-
-
 def loginPage(request):
     if request.user.is_authenticated:
-        return redirect('accounts:home')
+        return redirect('dashboard')
     else:
         if request.method == 'POST':
             username = request.POST.get('username')
@@ -61,7 +48,7 @@ def loginPage(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('accounts:home')
+                return redirect('dashboard')
             else:
                 messages.info(request, 'Username OR password is incorrect')
 
@@ -69,16 +56,6 @@ def loginPage(request):
         return render(request, 'accounts/login.html', context)
 
 
-def logoutUser(request):
-    logout(request)
-    return redirect('accounts:login')
-
-
-@login_required(login_url='accounts:login')
-def home(request):
-    context = {}
-    # return render(request, 'accounts/dashboard.html', context)
-    return HttpResponseRedirect(reverse('admin:index'))
 def listing_list(request):
     listings = Listing.isVisible.all()
     return render(request,
@@ -91,3 +68,41 @@ def listing_detail(request, id):
     return render(request,
                   'accounts/listing/detail.html',
                   {'listing': listing})
+
+
+##Nagaveni Code
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
+
+
+@login_required(login_url='login')
+def dashboard(request):
+    context = {}
+    return render(request, 'accounts/dashboard.html', context)
+
+
+def home1(request):
+    context = {}
+    return render(request, 'accounts/dashboard.html', context)
+
+@login_required(login_url='login')
+def myprofile(request):
+    context = {}
+    context["dataset"] = UserProfile.objects.all()
+    return render(request, 'accounts/myprofile.html', context)
+
+
+@login_required(login_url='login')
+def updateprofile(request):
+    context = {}
+    id = 1
+    obj = get_object_or_404(UserProfile, id=id)
+    form = UserModify(request.POST or None, instance=obj)
+    if form.is_valid():
+        form.save()
+        return render(request, 'accounts/myprofile.html', context)
+    context["form"] = form
+    return render(request, 'accounts/updateprofile.html', context)
+
