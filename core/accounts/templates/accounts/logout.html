@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Advance RealEstate</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+
+        body,html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: url('{% static '/images/background.png' %}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+        }
+
+                /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+                .row.content {
+                        height: 750px
+
+                }
+
+                /* Set gray background color and 100% height */
+                .sidenav {
+                        background-color: #808d9e;
+                        height: 100%;
+                        width: 18%;
+
+                }
+
+                .sidenav a {
+                        padding: 6px 8px 6px 16px;
+                        text-decoration: none;
+                        font-size: 25px;
+                        color: #000000;
+                        display: block;
+                }
+
+
+                /* On small screens, set height to 'auto' for the grid */
+                @media screen and (max-width: 767px) {
+                        .row.content {
+                                height: auto;
+                        }
+                }
+
+        </style>
+        <style>
+             #block1
+    	{
+
+      		padding: 20px;
+      		width: 700px;
+      		margin-left: auto;
+            margin-right: auto;
+                 margin-top: auto;
+                 margin-bottom: auto;
+    	}
+        </style>
+</head>
+
+<body style="background-color:#c5d4e8;">
+      <nav class="navbar navbar-inverse visible-xs">
+                <div class="container-fluid">
+                        <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">Logo</a>
+                        </div>
+                </div>
+        </nav>
+
+        <div class="container-fluid">
+                <div class="row content">
+                        <div class="col-sm-3 sidenav hidden-xs">
+                                <h2>aV</h2>
+                                <ul class="nav nav-pills nav-stacked">
+
+
+                                        <li><a href="{% url 'home1' %}">Home</a></li>
+                                        <li><a href="{% url 'myprofile' %}">My Profile</a></li>
+                                        <li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
+                                        <li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
+                                        <li><a href="#contact">Pull Visitor Logs</a></li>
+                                        <li><a href="#contact">Omaha Events</a></li>
+                                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                                </ul><br>
+                        </div>
+                        <br>
+                        <h1 align="right"><b>Madison Vance</b></h1><br><br><br><br>
+                       <div id="block1" align="center">
+                            <h3 style="background-color: #808d9e">
+                                <center><br> <b>Are you sure, <br><br> You want to logout ? </b></center> <br><br>
+                              <center>  <button class="button" type="button" style="background-color:#36454F; color: white" onclick="window.location='confirmationmessage';"> <b> Cancel</b></button>
+                             <button class="button" type="button" style="background-color:#36454F; color: white" onclick="window.location='confirmationmessage';"> <b> Logout</b></button> </center>
+                            </h3>
+                        </div>
+
+                </div>
+        </div>
+
+</body>

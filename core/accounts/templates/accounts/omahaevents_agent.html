@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Advance RealEstate</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+
+        body,html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: url('{% static '/images/background.png' %}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+        }
+
+                /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+                .row.content {
+                        height: 750px
+
+                }
+
+                /* Set gray background color and 100% height */
+                .sidenav {
+                        background-color: #808d9e;
+                        height: 100%;
+                        width: 18%;
+
+                }
+
+                .sidenav a {
+                        padding: 6px 8px 6px 16px;
+                        text-decoration: none;
+                        font-size: 25px;
+                        color: #000000;
+                        display: block;
+                }
+
+
+                /* On small screens, set height to 'auto' for the grid */
+                @media screen and (max-width: 767px) {
+                        .row.content {
+                                height: auto;
+                        }
+                }
+
+        </style>
+
+
+        <style>
+        table {
+             font-family: arial, sans-serif;
+             border-collapse: collapse;
+             width: 80%;
+             }
+
+            td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            }
+
+            tr:nth-child(even) {
+            background-color: #ffffff80;
+            }
+    </style>
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+</style>
+</head>
+
+<body style="background-color:#c5d4e8;">
+      <nav class="navbar navbar-inverse visible-xs">
+                <div class="container-fluid">
+                        <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">Logo</a>
+                        </div>
+                </div>
+        </nav>
+
+        <div class="container-fluid">
+                <div class="row content">
+                        <div class="col-sm-3 sidenav hidden-xs">
+                                <h2>aV</h2>
+                                <ul class="nav nav-pills nav-stacked">
+
+
+                                        <li><a href="{% url 'home1' %}">Home</a></li>
+                                        <li><a href="{% url 'myprofile' %}">My Profile</a></li>
+                                        <li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
+                                        <li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
+                                        <li><a href="#contact">Pull Visitor Logs</a></li>
+                                        <li><a href="{% url 'omahaeventsagent' %}">Omaha Events</a></li>
+                                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                                </ul>
+                        </div>
+
+                        <h2 align="right"><b>Madison Vance</b></h2>
+                        <h2 align="center"><b> Omaha Area Events</b></h2>
+    <h4 align="right"><button class="button" type="button" style="background-color:#36454F; color: white" onclick="window.location='login';"> Update events</button></h4>
+    <div>
+        <h4><b><u> Omaha Events</u></b></h4>
+
+        <table>
+            <tr>
+                <th> Date of Event</th>
+                <th> Event </th>
+                <th> More Info</th>
+            </tr>
+            <tr>
+                <td> Fri 16, December 2022 20:00</td>
+                <td> A Drag Queen Christmas</td>
+                <td> <a href="https://www.ticketnetwork.com/tickets/5324791/a-drag-queen-christmas-tickets-fri-dec-16-2022-orpheum-theatre-omaha">Find tickets for A Drag Queen Christmas in Omaha, NE at Orpheum Theatre - Omaha </a></td>
+            </tr>
+            <tr>
+                <td>Thu 22, December 2022 19:30</td>
+                <td> Mannheim Steamroller Christmas </td>
+                <td> <a href="https://www.ticketnetwork.com/tickets/5238444/mannheim-steamroller-christmas-tickets-thu-dec-22-2022-orpheum-theatre-omaha"> Find tickets for Mannheim Steamroller Christmas by Chip Davis in Omaha, NE at Orpheum Theatre - Omaha </a></td>
+            </tr>
+             <tr>
+                <td> Thu 29, December 2022 19:30</td>
+                <td> New Year's Eve Comedy Trifecta </td>
+                 <td> <a href="https://www.ticketnetwork.com/tickets/5412570/new-years-eve-comedy-trifecta-tickets-thu-dec-29-2022-funny-bone-comedy-club-omaha"> Find tickets for New Year's Eve Comedy in Omaha, NE at Funny Bone Comedy Club - Omaha</a></td>
+            </tr>
+        </table>
+    </div><br>
+    <div>
+        <h4><b> <u> Places to Visit</u></b></h4> <br>
+        <table>
+            <tr>
+                <th> <a href="https://www.omahazoo.com/"> Omaha Henry Doorly Zoo</a></th>
+                <th> <a href="https://www.joslyn.org/"> Joslyn Art Museum</a></th>
+                <th> <a href="https://durhammuseum.org/"> The Durham Museum</a></th>
+                <th> <a href="https://ocm.org/"> Omaha Children's Museum</a></th>
+            </tr>
+        </table><br>
+
+    </div>
+    <div>
+        <h4><b> <u> Great places to eat</u></b> </h4><br>
+        <table>
+            <tr>
+                <th> <a href="https://hiro88.com/"> Hiro 88 </a></th>
+                <th> <a href="https://locations.bonefishgrill.com/nebraska/omaha/120-regency-parkway"> Bonefish Grill</a></th>
+                <th> <a href="https://www.dolceomaha.com/"> Dolce Resturant</a></th>
+                <th> <a href="https://www.pfchangs.com/locations/us/ne/omaha/10150-california-st/9902-omaha.html?utm_source=YextMain&utm_medium=Directory"> PF Chang's </a></th>
+            </tr>
+        </table>
+
+    </div>
+
+                </div></div>
+
+</body>
