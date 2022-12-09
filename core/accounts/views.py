@@ -95,7 +95,6 @@ def myprofile(request):
     context["dataset"] = UserProfile.objects.all()
     return render(request, 'accounts/myprofile.html', context)
 
-
 @login_required(login_url='login')
 def updateprofile(request):
     context = {}
@@ -107,4 +106,8 @@ def updateprofile(request):
         return render(request, 'accounts/myprofile.html', context)
     context["form"] = form
     return render(request, 'accounts/updateprofile.html', context)
+
+def omahaevents_agent(request):
+    return render(request,'accounts/omahaevents_agent.html')
+
 

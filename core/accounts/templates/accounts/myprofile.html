@@ -53,7 +53,7 @@
 
     #block1 {
       margin: 30px 30px;
-      padding: 30px;
+      padding: 05px;
       width: 150px;
       float: left;
     }
@@ -67,20 +67,21 @@
     }
 
     #block3 {
-      margin: 133px 320px;
-      padding: 20px;
-      width: 350px;
+      margin: 40px 300px;
+      padding: 35px;
+      width: 380px;
       float: left;
       position: absolute;
       bottom: 0;
-
+      background-image: url('{% static '/images/background.png' %}');
     }
 
     #block4 {
       margin: 10px 20px;
       padding: 50px;
-      width: 680px;
+      width: 650px;
       float: left;
+      background-image: url('{% static '/images/background.png' %}');
     }
 
     .block {
@@ -127,35 +128,35 @@
           <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
         </ul><br>
       </div>
-      <div id="block1" style="float:left; background-color:#33475b"> <br><br><br><img src="../static/images/House.jpg"
-          style="width: 300%; height: 10%" alt="Agent Pic" align="left"> </div>
+          <div id= "block1" style="float:left; background-color:#33475b"> <img src="../static/images/agent.png"  style="width: 100%; height: 10%" alt="Agent Picture" align="left"> </div>
+    <br><br><br>
       <div id="block2">
 
-        <h5 align="left" style="font-size:150%;"> <b>Madison Vance <br> Real Estate Agent </b></h5>
+        <h5 align="left" style="font-size:170%;"> <b>Madison Vance <br> Real Estate Agent </b></h5>
 
       </div>
 
-      <div id="block3" style="float:left; background-color:#33475b">
+      <div id="block3" style="float:left">
 
-        <h3 align="left" style="color:white; font-size:200%"> <u> Personal Information </u></h3> <br>
+        <h3 align="left" style="color:Black; font-size:200%"> <u> <b>Personal Information </b></u></h3> <br>
         <table>
           <tr>
-            <th style="color:white; font-size:120%">Name: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.firstname}} {{dataset.0.lastname}}</th>
+            <th style="color:Black; font-size:120%">Name: </th>
+            <th style="color:Black; font-size:120%">{{dataset.0.firstname}} {{dataset.0.lastname}}</th>
           </tr>
           <tr>
             <th> <br></th>
           </tr>
           <tr>
-            <th style="color:white; font-size:120%">Cell Number: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.mobile}}</th>
+            <th style="color:Black">Cell Number: </th>
+            <th style="color:Black; font-size:120%">{{dataset.0.mobile}}</th>
           </tr>
           <tr>
             <th> <br></th>
           </tr>
           <tr>
-            <th style="color:white; font-size:120%">Email me: </th>
-            <th style="color:white">
+            <th style="color:Black; font-size:120%">Email me: </th>
+            <th style="color:Black">
               <span><a class="hello-msg" href="visitordetails.html"
                   style="font-size:120%;">{{dataset.0.useremail}}&nbsp;&nbsp;&nbsp;</a></span>
             </th>
@@ -164,26 +165,20 @@
             <th> <br></th>
           </tr>
           <tr>
-            <th style="color:white; font-size:120%"> Office Address: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.address}}</th>
+            <th style="color:Black; font-size:120%"> Office Address: </th>
+            <th style="color:Black; font-size:120%">{{dataset.0.address}}</th>
           </tr>
           <tr>
             <th> <br></th>
           </tr>
-          <tr>
-            <th style="color:white; font-size:120%">Visit my Website: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.weburl}}</th>
-            <th style="color:white">
 
-            </th>
-          </tr>
         </table>
       </div>
 
 
-      <div id="block4" style="float:right; background-color:#33475b">
-        <h3 style="color:white; font-size:150%" align="center"> <u>About me </u></h3>
-        <p style="color:white; font-size:110%"> I provide real estates such as home, apartment, housing to rent and buy.
+      <div id="block4" style="float:right">
+        <h3 style="color:Black; font-size:250%" align="center"> <u><b>About me</b> </u></h3>
+        <p style="color:Black; font-size:110%"> I provide real estates such as home, apartment, housing to rent and buy.
           After obtaining my undergraduate degree in Business Administration, got my Real Estate License and became a
           real estate agent with a well-respected
           Omaha area brokerage. Soon, I decided to strike out on my own and obtained my real estate agent License as
