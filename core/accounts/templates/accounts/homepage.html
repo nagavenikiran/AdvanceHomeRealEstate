@@ -1,4 +1,6 @@
 {% load static %}
+{% load l10n %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,7 +86,7 @@
     </div>
 
     <div style="color:white; width:100%; border:" align="center">
-        <br> <button class="button" type="button" style="background-color:#33475b" onclick="window.location={% url 'login' %};"> <b> Agent Login</b></button>
+        <br> <button class="button" type="button" style="background-color:#33475b" onclick="window.location={% url 'accounts:login' %};"> <b> Agent Login</b></button>
     </div>
 
     <div id="block3" style="color:white; width:45%;">
@@ -94,9 +96,9 @@
 
     <div id="block2" style="color:white; width:33%; background-color:#33475b;">
         <h2 align="left" style="font-size:200%"> This week's Featured Property </h2>
-            <h3 style="font-size:150%"> Classic Home </h3>
-            <h3 style="font-size:150%"> 12314, W Maple RD</h3>
-            <h3 style="font-size:150%"> $6728 </h3>
+        <h3 style="font-size:150%"> <a href={{ listing.get_absolute_url }} >{{ listing.address}} </a></h3>
+            <h3 style="font-size:150%"> ${{ listing.price }}</h3>
+            <h3 style="font-size:150%"> {{ listing.description}} </h3>
 
     </div>
 

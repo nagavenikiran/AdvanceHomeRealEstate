@@ -13,7 +13,7 @@ class Listing(models.Model):
     city = models.CharField(max_length=250)
     state = models.CharField(max_length=250)
     postal = models.IntegerField()
-    price = models.FloatField()
+    price = models.IntegerField()
     description = models.CharField(max_length=500)
     bathroom_count = models.FloatField(max_length=250)
     bedroom_count = models.IntegerField()

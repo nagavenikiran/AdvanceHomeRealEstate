@@ -76,13 +76,13 @@
                                 <ul class="nav nav-pills nav-stacked">
 
 
-                                        <li><a href="{% url 'home1' %}">Home</a></li>
-                                        <li><a href="{% url 'myprofile' %}">My Profile</a></li>
-                                        <li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
-                                        <li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
+                                        <li><a href="{% url 'accounts:home1' %}">Home</a></li>
+                                        <li><a href="{% url 'accounts:myprofile' %}">My Profile</a></li>
+                                        <li><a href="{% url 'admin:accounts_listing_changelist' %}">Listings</a></li>
+                                        <li><a href="{% url 'accounts:myprofile' %}">Visitor Requests</a></li>
                                         <li><a href="#contact">Pull Visitor Logs</a></li>
                                         <li><a href="#contact">Omaha Events</a></li>
-                                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                                        <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
                                 </ul><br>
                         </div>
                         <br>
@@ -94,6 +94,8 @@
                                 style="float: left; margin-right: 15px;"><br><br>
                         <h3>Classic Home<br><br>$6728<br><br>12314 W Maple Rd, Omaha, NE<br><br>4722 sq.ft<br><br><br><br><br><br>
                                 <u><left>Set new featured Property</left></u></h3>
+                </div>
+        </div>
 
 </body>
 

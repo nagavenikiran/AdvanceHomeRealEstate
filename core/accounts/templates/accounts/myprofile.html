@@ -118,13 +118,13 @@
         <h2>aV</h2>
         <ul class="nav nav-pills nav-stacked">
 
-          <li><a href="{% url 'home1' %}">Home</a></li>
-          <li><a href="{% url 'myprofile' %}">My Profile</a></li>
+          <li><a href="{% url 'accounts:home1' %}">Home</a></li>
+          <li><a href="{% url 'accounts:myprofile' %}">My Profile</a></li>
           <li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
-          <li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
+          <li><a href="{% url 'accounts:myprofile' %}">Visitor Requests</a></li>
           <li><a href="#contact">Pull Visitor Logs</a></li>
           <li><a href="#contact">Omaha Events</a></li>
-          <li><a href="{% url 'logout' %}">Logout</a></li>
+          <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
         </ul><br>
       </div>
       <div id="block1" style="float:left; background-color:#33475b"> <br><br><br><img src="../static/images/House.jpg"
@@ -196,7 +196,7 @@
       </div>
 
       <h1 align="right"><b>Madison Vance</b></h1>
-      <p align="right"><button class="block"><a href="{% url 'updateprofile' %}">Update Profile</a></button></p>
+      <p align="right"><button class="block"><a href="{% url 'accounts:updateprofile' %}">Update Profile</a></button></p>
 
 
 </body>

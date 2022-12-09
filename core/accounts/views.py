@@ -15,7 +15,9 @@ from .forms import UserModify
 
 def landingPage(request):
     #Update this with HTML page from Saikiran and Niha
-    return render(request, 'accounts/homepage.html')
+    listing = Listing.objects.get(featured='1')
+    return render(request, 'accounts/homepage.html',
+                  {'listing':listing})
 
 def aboutUs(request):
     return render(request,'accounts/AboutUs.html')
@@ -38,7 +40,7 @@ def filteredlistings(request):
 
 def loginPage(request):
     if request.user.is_authenticated:
-        return redirect('dashboard')
+        return redirect('accounts:dashboard')
     else:
         if request.method == 'POST':
             username = request.POST.get('username')
@@ -48,7 +50,7 @@ def loginPage(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('dashboard')
+                return redirect('accounts:dashboard')
             else:
                 messages.info(request, 'Username OR password is incorrect')
 
@@ -74,7 +76,7 @@ def listing_detail(request, id):
 
 def logoutUser(request):
     logout(request)
-    return redirect('login')
+    return redirect('accounts:login')
 
 
 @login_required(login_url='login')

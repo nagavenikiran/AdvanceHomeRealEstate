@@ -1,18 +1,23 @@
 {% extends "accounts/base.html" %}
+{% load l10n %}
 
 {% block title %} Current Listings {% endblock %}
 
 {% block content %}
-    <h2>Listings</h2>
-    {% for listing in listings %}
-        <h2>
-            <a href="{{ listing.get_absolute_url }}">
-                {{ listing.address }}
-            </a>
-        </h2>
-        <p>
-            Price: {{ listing.price }} <br>
-            Square Footage: {{ listing.square_footage }}
-        </p>
+    <h1 align="center">Listings</h1>
+        {% for listing in listings %}
+                <div id="block1">
+            <h2 align="center">
+                <a href="{{ listing.get_absolute_url }}">
+                    {{ listing.address }}
+                </a>
+            </h2>
+            <p>
+                <img src="static/images/House3.jpg"alt="House3" width="500" height="600"><br>
+                <h5 align="center" style="font-size:150%"> ${% localize on %}{{ listing.price }} {% endlocalize %}</h5>
+		        <h5 align="center" style="font-size:150%;"> {{ listing.subdivision.subdiv_name }} | {{ listing.city }} <br> {{ listing.bedroom_count }}bd| {{ listing.bathroom_count }} ba| {{ listing.square_footage }} sqft</h5>
+		        <h5 align="center" style="font-size:150%;"> {{ listing.prop_status.prop_status }} </h5><br>
+            </p>
+    </div>
     {% endfor %}
 {% endblock %}

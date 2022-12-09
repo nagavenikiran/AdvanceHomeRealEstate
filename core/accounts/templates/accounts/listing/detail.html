@@ -1,11 +1,12 @@
 {% extends "accounts/base.html" %}
+{% load l10n %}
 
 {% block title %}{{ listing.address }}{% endblock %}
 
 {% block content %}
-    <h1>{{ listing.address }}, {{ listing.city }}, {{ listing.state }} {{ listing.postal }}</h1>
+    <h1>{{ listing.address }}, {{ listing.city }}, {{ listing.state }} {% localize off %}{{ listing.postal }}{% endlocalize %}</h1>
 <p>
-    Price: {{ listing.price }} <br>
+    Price: ${% localize on %}{{ listing.price }} {% endlocalize %}<br>
     Subdivision: {{ listing.subdivision.subdiv_name }}<br>
     Number of Bedrooms: {{ listing.bedroom_count }}<br>
     Number of Bathrooms: {{ listing.bathroom_count }}<br>

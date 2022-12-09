@@ -23,3 +23,4 @@ class Prop_StatusAdmin(admin.ModelAdmin):
 class SubdivisionAdmin(admin.ModelAdmin):
     list_display = ('subdiv_name', 'subdiv_descr')
 
+
