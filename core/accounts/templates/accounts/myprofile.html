@@ -68,18 +68,20 @@
 
     #block3 {
       margin: 40px 300px;
-      padding: 20px;
+      padding: 35px;
       width: 380px;
       float: left;
       position: absolute;
       bottom: 0;
+      background-image: url('{% static '/images/background.png' %}');
     }
 
     #block4 {
       margin: 10px 20px;
       padding: 50px;
-      width: 680px;
+      width: 650px;
       float: left;
+      background-image: url('{% static '/images/background.png' %}');
     }
 
     .block {
@@ -122,7 +124,7 @@
           <li><a href="{% static '/htmlpages/a.html' %}">Listings</a></li>
           <li><a href="{% url 'myprofile' %}">Visitor Requests</a></li>
           <li><a href="#contact">Pull Visitor Logs</a></li>
-          <li><a href="#contact">Omaha Events</a></li>
+           <li><a href="{% url 'omahaevents_agent' %}">Omaha Events</a></li>
           <li><a href="{% url 'logout' %}">Logout</a></li>
         </ul><br>
       </div>
@@ -134,27 +136,27 @@
 
       </div>
 
-      <div id="block3" style="float:left; background-color:#33475b">
+      <div id="block3" style="float:left">
 
-        <h3 align="left" style="color:white; font-size:200%"> <u> Personal Information </u></h3> <br>
+        <h3 align="left" style="color:Black; font-size:200%"> <u> <b>Personal Information </b></u></h3> <br>
         <table>
           <tr>
-            <th style="color:white; font-size:120%">Name: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.firstname}} {{dataset.0.lastname}}</th>
+            <th style="color:Black; font-size:120%">Name: </th>
+            <th style="color:Black; font-size:120%">{{dataset.0.firstname}} {{dataset.0.lastname}}</th>
           </tr>
           <tr>
             <th> <br></th>
           </tr>
           <tr>
-            <th style="color:white; font-size:120%">Cell Number: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.mobile}}</th>
+            <th style="color:Black">Cell Number: </th>
+            <th style="color:Black; font-size:120%">{{dataset.0.mobile}}</th>
           </tr>
           <tr>
             <th> <br></th>
           </tr>
           <tr>
-            <th style="color:white; font-size:120%">Email me: </th>
-            <th style="color:white">
+            <th style="color:Black; font-size:120%">Email me: </th>
+            <th style="color:Black">
               <span><a class="hello-msg" href="visitordetails.html"
                   style="font-size:120%;">{{dataset.0.useremail}}&nbsp;&nbsp;&nbsp;</a></span>
             </th>
@@ -163,26 +165,20 @@
             <th> <br></th>
           </tr>
           <tr>
-            <th style="color:white; font-size:120%"> Office Address: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.address}}</th>
+            <th style="color:Black; font-size:120%"> Office Address: </th>
+            <th style="color:Black; font-size:120%">{{dataset.0.address}}</th>
           </tr>
           <tr>
             <th> <br></th>
           </tr>
-          <tr>
-            <th style="color:white; font-size:120%">Visit my Website: </th>
-            <th style="color:white; font-size:120%">{{dataset.0.weburl}}</th>
-            <th style="color:white">
 
-            </th>
-          </tr>
         </table>
       </div>
 
 
-      <div id="block4" style="float:right; background-color:#33475b">
-        <h3 style="color:white; font-size:150%" align="center"> <u>About me </u></h3>
-        <p style="color:white; font-size:110%"> I provide real estates such as home, apartment, housing to rent and buy.
+      <div id="block4" style="float:right">
+        <h3 style="color:Black; font-size:250%" align="center"> <u><b>About me</b> </u></h3>
+        <p style="color:Black; font-size:110%"> I provide real estates such as home, apartment, housing to rent and buy.
           After obtaining my undergraduate degree in Business Administration, got my Real Estate License and became a
           real estate agent with a well-respected
           Omaha area brokerage. Soon, I decided to strike out on my own and obtained my real estate agent License as
