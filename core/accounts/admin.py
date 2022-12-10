@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Listing, Property_Type, Prop_Status, Subdivision, UserProfile
+from .models import Listing, Property_Type, Prop_Status, Subdivision, UserProfile, Property_images
 
 
 admin.site.register(UserProfile)
@@ -23,4 +23,6 @@ class Prop_StatusAdmin(admin.ModelAdmin):
 class SubdivisionAdmin(admin.ModelAdmin):
     list_display = ('subdiv_name', 'subdiv_descr')
 
-
+@admin.register(Property_images)
+class PropImagesAdmin(admin.ModelAdmin):
+    list_display = ('prop_image_name', 'listing', 'image')
